@@ -1,0 +1,46 @@
+Soluzione 1
+SELECT *  
+FROM `students`   
+WHERE YEAR(`date_of_birth`) = 1990 ;
+
+
+Soluzione 2
+SELECT *   
+FROM `courses`  
+WHERE `cfu` > 10 ; 
+
+
+Soluzione 3
+SELECT *   
+FROM `students`  
+WHERE  DATE_FORMAT(FROM_DAYS(DATEDIFF(NOW(),`date_of_birth`)), '%y') >= 30;  
+
+
+Soluzione 4
+SELECT *   
+FROM `courses`  
+WHERE `period` = 'I semestre'  
+AND `year` = 1;  
+
+
+Soluzione 5
+FROM `exams`  
+WHERE HOUR(`hour`) >= 14  
+AND `date` = '2020/06/20';   
+
+
+Soluzione 6
+SELECT *   
+FROM `degrees`  
+WHERE `level` = 'magistrale';
+
+
+Soluzione 7
+SELECT COUNT(*) as 'dipartimenti'  
+FROM `departments`;
+
+
+Soluzione 8
+SELECT *  
+FROM `teachers`  
+WHERE `phone` IS NULL  
